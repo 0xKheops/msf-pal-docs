@@ -449,6 +449,26 @@ curl https://msf.pal.gg/rest/v1/alliance/5312ad0a-28a1-4681-87d4-6edd96652518/Kh
 ```
 
 
+## https://msf.pal.gg/rest/v1/alliance/ALLIANCE-ID/war/start
+
+POST to start or reset a war|
+
+## https://msf.pal.gg/rest/v1/alliance/ALLIANCE-ID/war/stop
+
+POST to stop a war|
+
+## https://msf.pal.gg/rest/v1/alliance/ALLIANCE-ID/war/used
+
+POST to update the list of war used characters
+
+Payload should be an array or items containing the following properties :
+
+|Property|Mandatory|Description|
+|-|-|-|
+|id|YES|identifier for the character|
+|playerId|YES|identifier of the player owning the character|
+|used|YES|boolean indicating if the character is used or not|
+
 ## https://msf.pal.gg/rest/v1/alliance/ALLIANCE-ID/PLAYER-ID/characters
 
 This endpoint updates ALL characters for a given player. 
