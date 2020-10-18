@@ -183,7 +183,9 @@ Sample JSON response :
                     "redStars": 3,
                     "basic": 2,
                     "special": 2,
-                    "passive": 1
+                    "passive": 1,
+                    "iso8Class": "skirmisher",
+                    "iso8Level": "2
                 },
                 ...
             ],
@@ -243,6 +245,9 @@ Response (array of) :
 |special|level of the special capacity (1-7)|
 |ultimate|level of the ultimate capacity (1-7)|
 |passive|level of the passive capacity (1-5)|
+|favorite|optional, boolean|
+|iso8Class|optional, possible values : "assassin", "fortify", "restoration", "skirmish" and "gambler"|
+|iso8Level|level of ISO8 (1-5)|
 
 Sample JSON response : 
 
@@ -259,7 +264,10 @@ Sample JSON response :
         "redStars": 3,
         "basic": 2,
         "special": 2,
-        "passive": 1
+        "passive": 1,
+        "favorite": false,
+        "iso8Class": "skirmisher",
+        "iso8Level": 2
     },
     ...
 ]
@@ -300,6 +308,9 @@ Response (array of) :
 |special|level of the special capacity (1-7)|
 |ultimate|level of the ultimate capacity (1-7)|
 |passive|level of the passive capacity (1-5)|
+|favorite|optional, boolean|
+|iso8Class|optional, possible values : "assassin", "fortify", "restoration", "skirmish" and "gambler"|
+|iso8Level|level of ISO8 (1-5)|
 
 Sample JSON response : 
 
@@ -443,6 +454,9 @@ Body should be a JSON object with the following properties
 |special|NO|level of the special capacity (1-7)|
 |ultimate|NO|level of the ultimate capacity (1-7)|
 |passive|NO|level of the passive capacity (1-5)|
+|favorite|optional, boolean|
+|iso8Class|optional, possible values : "assassin", "fortify", "restoration", "skirmish" and "gambler"|
+|iso8Level|level of ISO8 (1-5)|
 
 ```PowerShell
 curl https://msf.pal.gg/rest/v1/alliance/5312ad0a-28a1-4681-87d4-6edd96652518/Kheops/character -H "api-key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" -d "{\"id\":\"thanos\",\"unlocked\":true,\"level\":70,\"power\":50000,\"gearLevel\":12,\"yellowStars\":7}" -H "Content-Type:application/json"
